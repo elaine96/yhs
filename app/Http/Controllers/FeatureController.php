@@ -11,8 +11,12 @@ use App\Models\Feature;
 class FeatureController extends Controller
 {
     public function index() {
-		$feaes = Feature::paginate(4);
-		return view('features.index',compact('feaes'));
+    	if(Auth::check()) {
+			$feaes = Feature::paginate(4);
+			return view('features.index',compact('feaes'));
+		} else {
+			return redirect('login');
+		}
 	}
 
 	public function create() {
@@ -41,11 +45,6 @@ class FeatureController extends Controller
 			session()->flash('danger','功能和介绍不能为空');
 			return redirect('fea_create');
 		}
-	}
-
-	public function show($id) {
-		$fea = Feature::findOrFail($id);
-		return view('features/show',compact('fea'));
 	}
 
 	public function edit($id) {

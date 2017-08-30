@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="keywords" content="雨花石APP官网,江苏海道企服电子商务有限公司,雨花石,雨花石APP,雨花石家政,雨花石货运,雨花石共享工具,雨花石钱找项目">
 	<title>雨花石APP</title>
 	<link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
 	<link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
@@ -21,7 +22,7 @@
 				<a href="{{ route('login') }}"><div class="admin"></div></a>
 				<ul class="home">
 					<li><a href="mailto:haixingce@163.com">联系我们</a></li>
-					<li><a href="http://www.jshdqf.com" target="_blank">海道官网</a></li>
+					<li><a href="http://www.haidaoservice.com" target="_blank">海道官网</a></li>
 					<li data-toggle="modal" data-target="#download">下载</li>
 					<li class="active"><a href="#">首页</a></li>
 					<div class="modal fade" id="download" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -96,7 +97,7 @@
 		<div class="clear"></div>
 		<div class="footer">
 			<span>版权所有 &copy; 2017 江苏海道企服电子商务有限公司</span>
-			<span><a href="http://www.miitbeian.gov.cn/" target="_blank">备案号</a></span>
+			<span><a href="http://www.miitbeian.gov.cn/" target="_blank">备案号：苏ICP备17044812号-2</a></span>
 		</div>
 	</section>
 

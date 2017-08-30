@@ -14,10 +14,6 @@
 			<div id="fea">
 				@foreach($feaes as $fea)
 					<div class="onefea">
-						<!-- <div class="newdate">
-							{{ $fea->created_at->year }}.{{ $fea->created_at->month }}
-							<p>{{ $fea->created_at->day }}</p>
-						</div> -->
 						<p class="title">
 							{{ $fea->fea_title }}
 						</p>
@@ -31,7 +27,6 @@
 							{{ method_field('DELETE') }}
 							{{ csrf_field() }} 
 							<button class="btn btn-danger ReButton" style="float: right;" onclick="delete_fea('{{ $fea->fea_title }}','{{ route('fea_delete', $fea->id) }}')">删除</button>
-							<!-- id="btn-{{$fea->id}}" -->
 							<form action="{{ route('fea_edit', $fea->id) }}" method="post">
 								{{ csrf_field() }} 
 								<button class="btn btn-primary" style="float: right;">修改</button>
@@ -56,21 +51,6 @@
 		$("#modal-fea-delete").modal("show");
 	}
 	$('img').removeAttr('style');
-</script>
-<script>
-	// $('.ReButton').click(function(){
-	// 	var feaid=($(this).attr('id').replace(/btn\-/i,''));
-
-	// 	if(confirm("确定要删除么？")){
-	// 		$.ajax({
-	// 			url:"/fea/"+feaid,
-	// 			type:'post',
-	// 			success:function(){
-	// 				window.location.reload();
-	// 			}
-	// 		})
-	// 	}
-	// })
 </script>
 
 @endsection
